@@ -1,0 +1,6 @@
+[window]
+# startup_mode = "Fullscreen"
+opacity = 0.8
+[font]
+normal.family = "FiraMono Nerd Font"
+size = 9.0
