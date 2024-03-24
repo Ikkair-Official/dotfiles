@@ -276,7 +276,7 @@ serialize_pane_viewport true
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "dracula"
+theme "custom"
 
 // The name of the default layout to load on startup
 // Default: "default"
@@ -343,11 +343,11 @@ copy_on_select false
 
 // The folder in which Zellij will look for layouts
 //
-layout_dir "/home/archmage/.config/zellij/layouts/"
+layout_dir "/home/archmage/.config/zellij/layouts"
 
 // The folder in which Zellij will look for themes
 //
-// theme_dir "/path/to/my/theme_dir"
+theme_dir "/home/archmage/.config/zellij/themes"
 
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals
