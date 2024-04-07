@@ -42,6 +42,18 @@ return {
             capabilities = capabilities,
           }
         end,
+        ["rust_analyzer"] = function ()
+          require("lspconfig")["rust_analyzer"].setup{
+            capabilities = capabilities,
+            settings = {
+              ["rust_analyzer"] = {
+                cargo = {
+                  allFeatures = true,
+                }
+              }
+            }
+          }
+        end,
         ["lua_ls"] = function ()
           require("lspconfig")["lua_ls"].setup{
             capabilities = capabilities,
