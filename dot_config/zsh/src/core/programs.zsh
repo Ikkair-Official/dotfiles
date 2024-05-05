@@ -18,6 +18,12 @@ else
   echo 'atuin: command not found'
 fi
 
+if (( $+commands[fzf] )); then
+  eval "$(fzf --zsh)"
+else
+  echo 'fzf: command not found'
+fi
+
 if (( $+commands[zoxide] )); then
   eval "$(zoxide init zsh)"
 else
