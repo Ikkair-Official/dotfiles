@@ -21,19 +21,6 @@ keybinds {
         bind "-" { Resize "Decrease"; }
     }
     pane {
-        // To create horizontal pane
-        unbind "h"
-        bind "h" { NewPane "Right"; SwitchToMode "Normal"; }
-
-        // To create vertical pane
-        unbind "v"
-        bind "v" { NewPane "Down"; SwitchToMode "Normal"; }
-
-        // To change rename pane
-        unbind "c" 
-        unbind "r" 
-        bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0; }
-
         bind "Ctrl p" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
