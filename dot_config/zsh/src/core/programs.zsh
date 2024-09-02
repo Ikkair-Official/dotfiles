@@ -40,9 +40,13 @@ if (( $+commands[eza] )); then
   alias ls="eza --sort=name --grid --long --classify=automatic --dereference --icons=automatic --group-directories-first --group"
   alias la="eza --sort=name --grid --long --classify=automatic --dereference --icons=automatic --group-directories-first --group --all"
   alias lf="eza --sort=name --grid --long --classify=automatic --dereference --icons=automatic --group-directories-first --group --only-files"
-  alias lg="eza --sort=name --grid --long --classify=automatic --dereference --icons=automatic --group-directories-first --group --git"
 else
   echo 'eza: command not found'
 fi
-
   
+if (( $+commands[lazygit] )); then
+  alias lg="lazygit"
+else
+  echo 'lazygit: command not found'
+fi
+
