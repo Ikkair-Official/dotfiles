@@ -11,7 +11,7 @@ return {
       require("mason-lspconfig").setup{
         ensure_installed = {
           -- languages
-          "lua_ls", "rust_analyzer", "clangd", "gopls", "jdtls", "tsserver",
+          "lua_ls", "rust_analyzer", "clangd", "gopls", "jdtls", "ts_ls",
           -- web dev
           "cssls", "cssmodules_ls", "html", "sqlls", "tailwindcss",
           -- configs
