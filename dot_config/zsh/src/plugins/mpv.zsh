@@ -15,6 +15,4 @@ if (( $+commands[mpv] )); then
     fi
   }
   alias mpvs=mpvs
-else
-  echo 'mpv: command not found'
 fi
