@@ -40,6 +40,7 @@ if (( $+commands[eza] )); then
   alias ls="eza --sort=name --grid --long --classify=automatic --dereference --icons=automatic --group-directories-first --group"
   alias la="eza --sort=name --grid --long --classify=automatic --dereference --icons=automatic --group-directories-first --group --all"
   alias lf="eza --sort=name --grid --long --classify=automatic --dereference --icons=automatic --group-directories-first --group --only-files"
+  export EZA_GRID_ROWS=10
 else
   echo 'eza: command not found'
 fi
