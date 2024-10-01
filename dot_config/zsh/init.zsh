@@ -7,7 +7,8 @@ source $CONFIG_PATH_ZSH/src/core/keybind.zsh
 source $CONFIG_PATH_ZSH/src/core/programs.zsh
 
 # Plugins
-source $CONFIG_PATH_ZSH/src/plugins/zsh-autosuggestions.zsh
-source $CONFIG_PATH_ZSH/src/plugins/chezmoi-completion.zsh
+source $CONFIG_PATH_ZSH/src/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $CONFIG_PATH_ZSH/src/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source $CONFIG_PATH_ZSH/src/plugins/zsh-completions/zsh-completions.plugin.zsh
+source $CONFIG_PATH_ZSH/src/plugins/chezmoi-completion.zsh
+autoload -U compinit && compinit
