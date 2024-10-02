@@ -7,3 +7,6 @@
 [submodule "dot_config/zsh/src/external_plugins/zsh-completions"]
 	path = dot_config/zsh/src/external_plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "dot_config/zsh/src/external_plugins/fzf-tab"]
+	path = dot_config/zsh/src/external_plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab.git

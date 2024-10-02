@@ -7,8 +7,9 @@ source $CONFIG_PATH_ZSH/src/core/keybind.zsh
 source $CONFIG_PATH_ZSH/src/core/programs.zsh
 
 # Plugins
-source $CONFIG_PATH_ZSH/src/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $CONFIG_PATH_ZSH/src/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $CONFIG_PATH_ZSH/src/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source $CONFIG_PATH_ZSH/src/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source $CONFIG_PATH_ZSH/src/plugins/zsh-completions/zsh-completions.plugin.zsh
+source $CONFIG_PATH_ZSH/src/plugins/fzf-tab/fzf-tab.plugin.zsh
 source $CONFIG_PATH_ZSH/src/plugins/chezmoi-completion.zsh
 source $CONFIG_PATH_ZSH/src/plugins/post-plugin-script.zsh
