@@ -14,10 +14,9 @@ return {
     vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T)
 
     require("nvim-treesitter.configs").setup {
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "rust", "typescript", "go", "javascript", "html", "comment",
-        "http", "json", "jsonc", "json5", "jsonnet", "php", "regex", "sql", "toml", "bash", "java", "yaml", "dockerfile",
-        "css", "tsx", "gitignore", "kotlin", "make", "haskell", "markdown", "markdown_inline", "xml", "scss", "groovy", "graphql", "kdl", "nix"},
-      sync_install = false,
+      ensure_installed = "all",
+      auto_install = true,
+      sync_install = true,
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
