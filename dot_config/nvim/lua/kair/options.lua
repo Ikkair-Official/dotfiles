@@ -53,3 +53,21 @@ vim.cmd([[
 for key, value in pairs(options) do
   vim.opt[key] = value
 end
+
+-- Function to set the correct filetype by stripping .tmpl
+local function set_filetype_for_tmpl()
+  local filename = vim.fn.expand("%:t")  -- Get the current file name
+  local base_ext = vim.fn.fnamemodify(filename, ":e:e")  -- Get the second-to-last extension
+
+  -- If there's a base extension, set the filetype based on it
+  if base_ext ~= "" then
+    vim.bo.filetype = base_ext  -- Set the filetype to the base extension (e.g., "rs" for "file.rs.tmpl")
+  end
+end
+
+-- Autocommand to apply the logic for .tmpl files
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = "*.tmpl",
+  callback = set_filetype_for_tmpl,
+})
+
