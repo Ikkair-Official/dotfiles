@@ -3,9 +3,8 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Remap F9 as keyleader
-vim.cmd([[
-  let mapleader = "\<F9>"
-]])
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Normal Mode
 keymap("n", "<S-Left>", "<C-w><Left>", opts)      -- Shift+Left to change to left window
