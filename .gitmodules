@@ -10,3 +10,6 @@
 [submodule "dot_config/zsh/src/external_plugins/fzf-tab"]
 	path = dot_config/zsh/src/external_plugins/fzf-tab
 	url = https://github.com/Aloxaf/fzf-tab.git
+[submodule "dot_config/zsh/src/external_plugins/zsh-vi-mode"]
+	path = dot_config/zsh/src/external_plugins/zsh-vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode.git

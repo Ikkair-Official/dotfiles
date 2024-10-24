@@ -21,7 +21,7 @@ bindkey -M viins -r "^H"
 bindkey -M viins "^H" backward-kill-word
 
 # Esc to vicmd mode from emacs
-bindkey -M emacs "\e" vi-cmd-mode
+# bindkey -M emacs "\e" vi-cmd-mode
 
 # To use normal backspace in vi insert
-bindkey -M viins "\b" backward-delete-char
+# bindkey -M viins "\b" backward-delete-char
