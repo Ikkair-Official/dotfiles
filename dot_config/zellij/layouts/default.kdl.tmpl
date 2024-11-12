@@ -1,0 +1,23 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zjstatus.wasm" {
+
+                format_left  "#[fg=#9399B2] {session} "
+                format_center "{tabs}"
+                format_right "{datetime}"
+                format_space ""
+
+                hide_frame_for_single_pane "false"
+
+                tab_normal               "#[fg=#6C7086] {index}"
+                tab_active               "#[fg=#9399B2,bold] {index}"
+
+                datetime        "#[fg=#9399B2, bg=#000000] {format} "
+                datetime_format "%A, %d %b %Y %H:%M"
+                datetime_timezone "Asia/Jakarta"
+            }
+        }
+        children
+    }
+}
