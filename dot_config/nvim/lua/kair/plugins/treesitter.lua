@@ -14,7 +14,7 @@ return {
     vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T)
 
     require("nvim-treesitter.configs").setup {
-      ensure_installed = "all",
+      ensure_installed = { "lua", "git_config", "bash", "git_rebase", "gitignore", "json", "make", "nginx", "vim", "vimdoc", "yaml", "toml", "xml", "dockerfile", "comment" },
       auto_install = true,
       sync_install = true,
       highlight = {
@@ -84,16 +84,16 @@ return {
             ["]z"] = { query = "@fold", query_group = "folds", desc = "Next fold" },
           },
           goto_next = {
-            ["<F3>i"] = "@conditional.outer",
-            ["<F3>b"] = "@block.outer",
-            ["<F3>f"] = "@function.outer",
-            ["<F3>l"] = "@loop.outer",
+            ["<Leader>ti"] = "@conditional.outer",
+            ["<Leader>tb"] = "@block.outer",
+            ["<Leader>tf"] = "@function.outer",
+            ["<Leader>tl"] = "@loop.outer",
           },
           goto_previous = {
-            ["<F3>B"] = "@block.outer",
-            ["<F3>I"] = "@conditional.outer",
-            ["<F3>F"] = "@function.outer",
-            ["<F3>L"] = "@loop.outer",
+            ["<Leader>tB"] = "@block.outer",
+            ["<Leader>tI"] = "@conditional.outer",
+            ["<Leader>tF"] = "@function.outer",
+            ["<Leader>tL"] = "@loop.outer",
           }
         },
       }
