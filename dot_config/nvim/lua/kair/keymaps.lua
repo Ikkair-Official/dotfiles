@@ -13,7 +13,7 @@ keymap("n", "<S-Up>", "<C-w><Up>", opts)          -- Shift+Up to change to top w
 keymap("n", "<S-Down>", "<C-w><Down>", opts)      -- Shift+Down to change to down window
 keymap("n", "<C-PageUp>", ":bprevious<CR>", opts) -- Change to next buffer
 keymap("n", "<C-PageDown>", ":bnext<CR>", opts)   -- Change to previous buffer
-keymap("n", "<C-W>", ":bd<CR>", opts)             -- Unload current buffer
+-- keymap("n", "<C-W>", ":bd<CR>", opts)             -- Unload current buffer
 
 -- Input Mode
 keymap("i", "<C-BS>", "<C-w>", opts) -- Ctrl+Backspace to delete word
