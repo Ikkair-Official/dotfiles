@@ -8,16 +8,7 @@ return {
     },
     init = function()
       require("mason").setup()
-      require("mason-lspconfig").setup{
-        ensure_installed = {
-          -- languages
-          "lua_ls", "rust_analyzer", "clangd", "gopls", "jdtls", "ts_ls",
-          -- web dev
-          "cssls", "cssmodules_ls", "html", "sqlls", "tailwindcss",
-          -- configs
-          "dockerls", "yamlls", "taplo", "rnix", "bashls"
-        }
-      }
+      require("mason-lspconfig").setup()
 
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -36,14 +27,14 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       capabilities.workspace = capabilities.workspace or {}
       capabilities.workspace.didChangeWatchedFiles = { dynamicRegistration = true }
-      require("mason-lspconfig").setup_handlers{
-        function (server_name)
-          require("lspconfig")[server_name].setup{
+      require("mason-lspconfig").setup_handlers {
+        function(server_name)
+          require("lspconfig")[server_name].setup {
             capabilities = capabilities,
           }
         end,
-        ["rust_analyzer"] = function ()
-          require("lspconfig")["rust_analyzer"].setup{
+        ["rust_analyzer"] = function()
+          require("lspconfig")["rust_analyzer"].setup {
             capabilities = capabilities,
             settings = {
               ["rust_analyzer"] = {
@@ -54,13 +45,13 @@ return {
             }
           }
         end,
-        ["lua_ls"] = function ()
-          require("lspconfig")["lua_ls"].setup{
+        ["lua_ls"] = function()
+          require("lspconfig")["lua_ls"].setup {
             capabilities = capabilities,
             settings = {
               Lua = {
                 diagnostics = {
-                  globals = {"vim"},
+                  globals = { "vim" },
                 }
               }
             }
@@ -93,12 +84,8 @@ return {
           vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts)
           vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, opts)
           vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-          vim.keymap.set('n', '<Leader>f', function()
-            vim.lsp.buf.format { async = true }
-          end, opts)
         end,
       })
-
     end
   },
 }
